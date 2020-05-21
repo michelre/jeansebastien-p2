@@ -25,7 +25,8 @@ ul {
 
 h1 {
     text-align: left;
-    font-size: 90px;
+    font-size: 60px;
+    padding-top: 20px;
 }
 
 strong {
@@ -36,6 +37,7 @@ body {
     display: block;
     background-color: white;
     margin: 0px auto;
+    font-family: 'ambleregular', 'Impact', "arial Black";
 }
 
 p,
@@ -52,7 +54,6 @@ h2,
 h1,
 h3,
 h4 {
-    font-family: 'ambleregular', 'Impact', "arial Black";
     color: black;
     font-weight: bold;
     margin: 0;
@@ -62,6 +63,10 @@ h4 {
     display: inline-block;
     vertical-align: top;
     padding: 0 20px;
+}
+
+#contenu h2 {
+    margin-bottom: 30 px;
 }
 
 #liseret {
@@ -96,7 +101,7 @@ h4 {
 
 img {
     display: block;
-    margin: 2% auto 0px auto;
+    margin: 6% auto 0px auto;
     height: auto;
     width: 60%;
     position: relative;
@@ -110,19 +115,28 @@ img {
 
 .title i {
     color: rgb(0, 230, 118);
+    padding-right: 20px;
+    font-size: 30px;
+}
+
+h3 {
+    vertical-align: middle;
+    border-bottom: solid 3px rgb(0, 230, 118);
 }
 
 .liseret-title {
-    background: black;
+    background: rgb(100, 100, 100);
     color: rgb(0, 230, 118);
     text-transform: uppercase;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
+    padding: 10px 0px 10px 0px;
 }
 
 .liseret-content {
     padding: 20px;
     margin: 0;
+    text-align: justify;
 }
 
 .liseret-content p {
@@ -135,6 +149,12 @@ img {
     justify-content: space-evenly;
     font-size: 50px;
     text-align: center;
+}
+
+.contact-info h3 {
+    padding-top: 20px;
+    font-size: 1em;
+    font-weight: normal;
 }
 
 @media screen and (max-width: 1024px) {}
@@ -159,5 +179,12 @@ img {
     }
     #liseret .photo {
         order: 0;
+    }
+    .liseret-title {
+        background: rgb(100, 100, 100);
+        color: rgb(0, 230, 118);
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 20px;
     }
 }
