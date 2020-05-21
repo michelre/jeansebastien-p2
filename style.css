@@ -100,6 +100,7 @@ img {
     height: auto;
     width: 60%;
     position: relative;
+    align-content: center;
 }
 
 #container {
@@ -115,7 +116,8 @@ img {
     background: black;
     color: rgb(0, 230, 118);
     text-transform: uppercase;
-    text-align:center;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .liseret-content {
@@ -123,32 +125,38 @@ img {
     margin: 0;
 }
 
+.liseret-content p {
+    margin: 0 0 0 0;
+}
+
+.icone {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    font-size: 50px;
+    text-align: center;
+}
+
 @media screen and (max-width: 1024px) {}
 
 @media screen and (min-width: 1024px) {
-
     #container {
         flex-wrap: nowrap;
     }
-
     #liseret {
         width: 40%;
         order: 0;
         margin-right: 3%;
     }
-
     img {
         width: 60%;
     }
-
     #liseret #contact {
         flex-wrap: wrap;
     }
-
     #liseret .contact-info {
         width: 100%;
     }
-
     #liseret .photo {
         order: 0;
     }
