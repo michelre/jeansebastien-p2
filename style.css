@@ -43,6 +43,12 @@ body {
 p,
 ul {
     color: black;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
 }
 
 h4 {
@@ -74,13 +80,13 @@ h2 strong {
     margin-bottom: 30 px;
 }
 
-ul li::before {
+/*ul li::before {
     content: counter(li);
     color: rgb(0, 230, 118);
     display: inline-block;
     width: 1.5em;
     margin-left: -1.2em
-}
+}*/
 
 #liseret {
     width: 100%;
@@ -133,11 +139,14 @@ img {
     vertical-align: bottom;
 }
 
+/* Session du 25/05: display flex + alignement pour le centrage vertical */
 .title {
+    display: flex;
+    align-items: center;
     height: 45px;
     text-transform: uppercase;
     font-size: 25px;
-    vertical-align: middle;
+    padding-bottom: 10px;
     border-bottom: solid 3px rgb(0, 230, 118);
 }
 
@@ -174,7 +183,71 @@ img {
     font-weight: normal;
 }
 
-@media screen and (max-width: 1024px) {}
+/* Session du 25/05: Ajout des puces et alignement des items */
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+.puce-double {
+    width: 10px;
+    display: inline-block;
+    height: 10px;
+    border: 2px solid rgb(0, 230, 118);
+    border-radius: 50%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    box-sizing: border-box;
+    position: relative;
+    margin-right: 10px;
+}
+
+.puce-simple {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgb(0, 230, 118);
+    border-radius: 50%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    box-sizing: border-box;
+    position: relative;
+    margin-right: 10px;
+}
+
+.puce-double::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(0, 230, 118);
+    border-radius: 50%;
+}
+
+.item-date {
+    margin-right: 20px;
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.item-date p {
+    margin: 0;
+}
+
+.item-details h5 {
+    margin: 0;
+}
+
+.item-lieu {
+    padding-left: 20px;
+}
 
 @media screen and (min-width: 1024px) {
     #container {
@@ -196,6 +269,8 @@ img {
     }
     #liseret .photo {
         order: 0;
+        display: flex;
+        margin: 20px auto;
     }
     .liseret-title {
         background: rgb(100, 100, 100);
@@ -203,5 +278,13 @@ img {
         text-transform: uppercase;
         text-align: center;
         margin-top: 20px;
+    }
+
+    .item {
+        flex-wrap: nowrap;
+    }
+
+    .item-date {
+        width: 33%;
     }
 }
