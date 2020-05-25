@@ -65,13 +65,21 @@ h4 {
     padding: 0 20px;
 }
 
-ul {
-    list-style-type: circle;
-    ;
+h2 strong {
+    color: black;
+    border-bottom: rgb(0, 230, 118) solid 3px;
 }
 
 #contenu h2 {
     margin-bottom: 30 px;
+}
+
+ul li::before {
+    content: counter(li);
+    color: rgb(0, 230, 118);
+    display: inline-block;
+    width: 1.5em;
+    margin-left: -1.2em
 }
 
 #liseret {
